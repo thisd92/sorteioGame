@@ -17,16 +17,15 @@ header h1 {
   padding: 15px;
 }
 
-.container-players, .container-teams {
+.container-players {
   width: 50%;
   padding: 10px;
-}
-
-.container-players {
   background-color: #dfdfdf;
 }
 
 .container-teams {
+  width: 50%;
+  padding: 10px;
   background-color: #c0c0c0;
 }
 
@@ -48,20 +47,35 @@ form {
   padding: 4px;
 }
 
-.playerList, .teamList {
+.playerList {
   margin-top: 10px;
 }
 
-.playerList .player, .teamList .team {
+.teamList {
+  margin-top: 10px;
+}
+
+.playerList .player {
   display: flex;
   justify-content: center;
 }
 
-.playerList p, .teamList p {
+.playerList p {
   width: 50%;
   padding: 5px;
 }
 
+.teamList .team {
+  display: flex;
+  justify-content: space-around;
+}
+
+.teamList p {
+  width: 50%;
+  padding: 5px;
+}
+
+/* Estilos para o botão Sortear */
 section {
   text-align: center;
   margin-bottom: 20px;
@@ -81,6 +95,7 @@ section button:hover {
   background-color: #45a049;
 }
 
+/* Estilos para o container de sorteio */
 .container-sorteio {
   display: flex;
   flex-wrap: wrap;
@@ -99,4 +114,18 @@ section button:hover {
 .player-item p {
   margin: 0;
   padding: 5px 0;
+}
+
+/* Media queries para telas pequenas */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .container-players,
+  .container-teams {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }
